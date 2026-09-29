@@ -956,7 +956,8 @@ section[id] {
   border-radius: var(--r-full);
 }
 .ps5-video-wrapper {
-  max-width: 260px;
+  max-width: 100%;
+  aspect-ratio: 848 / 478;
 }
 .ps5-main-video {
   width: 100%;
@@ -1936,9 +1937,6 @@ section[id] {
     width: 100%;
     justify-content: center;
   }
-  .showcase-video {
-    height: 290px;
-  }
 }
 
 @media (max-width: 640px) {
@@ -1951,7 +1949,6 @@ section[id] {
   .fast-booking-info h3 { font-size: 1.3rem; }
   .video-showcase-card { padding: 24px 18px; }
   .video-showcase-title { font-size: 1.35rem; }
-  .showcase-video { height: 230px; }
   .ps5-showcase-card { padding: 24px 18px; }
   .ps5-showcase-title { font-size: 1.35rem; }
   .ps5-variant-item { padding: 12px 14px; gap: 12px; }

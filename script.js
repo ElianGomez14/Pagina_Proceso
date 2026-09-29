@@ -240,6 +240,18 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const ps5MainPlayer = document.getElementById('ps5-main-player');
+
+  // Ajusta la caja al formato real de cada video (vertical u horizontal) para evitar barras negras
+  document.querySelectorAll('.showcase-video').forEach(v => {
+    const fit = () => {
+      if (!v.videoWidth) return;
+      const wrap = v.parentElement, portrait = v.videoHeight > v.videoWidth;
+      wrap.style.aspectRatio = v.videoWidth + ' / ' + v.videoHeight;
+      wrap.style.maxWidth = portrait ? (wrap.classList.contains('ps5-video-wrapper') ? '260px' : '') : '100%';
+    };
+    v.addEventListener('loadedmetadata', fit);
+    fit();
+  });
   const ps5PhaseTag = document.getElementById('ps5-phase-tag');
   const ps5InfoTitle = document.getElementById('ps5-info-title');
   const ps5InfoDesc = document.getElementById('ps5-info-desc');
