@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── CARRUSEL ── */
   const slides = [
     {
-      src: 'Imagenes%20y%20videos%20Pagina/carrusel.jpeg',
+      src: 'Imagenes%20y%20videos%20Pagina/A.webp',
       title: 'Ensamble custom con pantalla LCD',
       desc: 'Refrigeración líquida con logo Orion Gamers y GPU GeForce RTX vertical.'
     },
@@ -116,12 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Diagnóstico térmico, mantenimiento y repotenciación para equipos gaming.'
     },
     {
-      src: 'Imagenes%20y%20videos%20Pagina/carrusel4.jpeg',
+      src: 'Imagenes%20y%20videos%20Pagina/I.webp',
       title: 'Ensamble White Edition y upgrades',
       desc: 'Chasis blanco, componentes MSI y AORUS, RAM RGB y SSD NVMe.'
     },
     {
-      src: 'Imagenes%20y%20videos%20Pagina/carrusel5.jpeg',
+      src: 'Imagenes%20y%20videos%20Pagina/carrusel5.webp',
       title: 'Optimización y mantenimiento gamer',
       desc: 'Pastas de alta conductividad, limpieza profunda y flujo de aire calibrado.'
     }
@@ -545,8 +545,8 @@ document.addEventListener('DOMContentLoaded', () => {
       status: 'Bajo pedido',
       waText: 'Hola Orion Gamers, deseo cotizar un ensamble custom similar al Hyte Y70 Touch.',
       variants: [
-        'Imagenes%20y%20videos%20Pagina/A.jpeg',
-        'Imagenes%20y%20videos%20Pagina/A2.jpeg'
+        'Imagenes%20y%20videos%20Pagina/A.webp',
+        'Imagenes%20y%20videos%20Pagina/A2.webp'
       ]
     },
     B: {
@@ -607,10 +607,10 @@ document.addEventListener('DOMContentLoaded', () => {
       status: 'Disponible · Verificada en taller',
       waText: 'Hola Orion Gamers, deseo cotizar la laptop ASUS ExpertBook Core i5 13va Gen.',
       variants: [
-        'Imagenes%20y%20videos%20Pagina/D.jpeg',
-        'Imagenes%20y%20videos%20Pagina/D2.jpeg',
-        'Imagenes%20y%20videos%20Pagina/D3.jpeg',
-        'Imagenes%20y%20videos%20Pagina/D4.jpeg'
+        'Imagenes%20y%20videos%20Pagina/D.webp',
+        'Imagenes%20y%20videos%20Pagina/D2.webp',
+        'Imagenes%20y%20videos%20Pagina/D3.webp',
+        'Imagenes%20y%20videos%20Pagina/D4.webp'
       ]
     },
     E: {
@@ -638,7 +638,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Laptop Lenovo V15 G4 (Ryzen 5 + 16GB RAM)',
       badge: 'Oferta',
       badgeClass: 'pill-green',
-      tag: 'Precio especial: $1.820.000 COP',
+      tag: 'Oficina y Estudio',
       desc: 'Ideal para oficina y universidad: AMD Ryzen 5 7520U, 16 GB de RAM LPDDR5, SSD NVMe de 512 GB y pantalla Full HD de 15.6" antirreflejo.',
       specs: [
         'AMD Ryzen 5 7520U (4 núcleos / 8 hilos, hasta 4.3 GHz)',
@@ -710,8 +710,8 @@ document.addEventListener('DOMContentLoaded', () => {
       status: 'Disponible para ensamble',
       waText: 'Hola Orion Gamers, deseo cotizar un ensamble Gamer White Edition.',
       variants: [
-        'Imagenes%20y%20videos%20Pagina/I.jpeg',
-        'Imagenes%20y%20videos%20Pagina/I2.jpeg'
+        'Imagenes%20y%20videos%20Pagina/I.webp',
+        'Imagenes%20y%20videos%20Pagina/I2.webp'
       ]
     },
     'LIC-OFFICE24': {
