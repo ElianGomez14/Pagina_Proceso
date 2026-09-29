@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Oficial | Orion Gamers · Ensambles, Portátiles y Licencias Originales</title>
+  <meta name="description" content="Explora el catálogo de Orion Gamers en Itagüí: Ensambles gamer personalizados, portátiles garantizados, software 100% original (Windows, Office, Kaspersky) y componentes.">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta property="og:title" content="Catálogo Oficial · Orion Gamers">
+  <meta property="og:description" content="Ensambles gamer a medida, portátiles, licencias de software originales y servicios de taller en Itagüí.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://oriongamerstecnologia.com/catalogo.html">
+  <meta property="og:image" content="Logos%20OrionGamers/Orion_Gamers_Variante_14.webp">
+  <link rel="icon" type="image/webp" href="Logos%20OrionGamers/Orion_Gamers_Variante_14.webp" id="favicon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="Logos%20OrionGamers/Orion_Gamers_Variante_14.webp" alt="Orion Gamers" id="brand-logo" width="44" height="44">
+        <div class="logo-text">
+          <span class="logo-name">ORION <span class="accent">GAMERS</span></span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="mantenimientos.html" class="nav-link nav-highlight">Mantenimientos</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="catalogo.html" class="nav-link active">Catálogo</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-btn" type="button" aria-label="Cambiar tema">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20quiero%20agendar%20una%20cita%20previa" target="_blank" rel="noopener" class="btn btn-primary btn-sm hide-mobile">Agendar Cita</a>
+        <button id="menu-toggle" class="menu-btn" type="button" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO DEL CATÁLOGO ==================== -->
+    <section class="catalog-hero">
+      <div class="container text-center">
+        <span class="section-badge">CATÁLOGO OFICIAL · ORION GAMERS</span>
+        <h1 class="catalog-hero-title">Equipos, Portátiles &amp; <span class="gradient">Ensambles Gamer</span></h1>
+        <p class="catalog-hero-desc">
+          Explora nuestros ensambles gamer armados a medida con refrigeración líquida personalizada y laptops seleccionadas, verificadas y garantizadas en el taller de Orion Gamers en Itagüí.
+        </p>
+
+        <!-- Pestañas de Filtrado Interactivo -->
+        <div class="catalog-filter-bar" id="catalog-filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">
+            <span>Todos los Productos</span>
+            <span class="filter-count" id="count-all">14</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="gamer-custom">
+            <span>Ensambles Custom</span>
+            <span class="filter-count">2</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="laptop-gamer">
+            <span>Laptops Gamer</span>
+            <span class="filter-count">3</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="laptop-pro">
+            <span>Portátiles Corporativos</span>
+            <span class="filter-count">4</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="software-licencias">
+            <span>Licencias de Software</span>
+            <span class="filter-count">5</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== GRILLA DEL CATÁLOGO ==================== -->
+    <section class="catalog-section">
+      <div class="container">
+        
+        <div class="catalog-grid" id="catalog-grid">
+
+          <!-- 1. PRODUCTO A: ENSAMBLE CUSTOM HYTE Y70 TOUCH SCREEN -->
+          <article class="catalog-card" data-category="gamer-custom" data-product-id="A">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos del Ensamble Custom Hyte Y70">
+              <span class="catalog-variants-pill">2 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/A.jpeg" alt="Ensamble Custom Hyte Y70 Touch Screen Orion Gamers con GPU Vertical y Refrigeración Líquida" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 2 fotos y pantalla LCD</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Ensamble Custom de Exhibición · Letra A</div>
+              <h3 class="catalog-item-title">Ensamble Custom Hyte Y70 Touch Screen</h3>
+              <p class="catalog-item-desc">Construcción maestra en nuestro taller: chasis Hyte Y70 con pantalla LCD táctil de 14.5" 2.5K integrada, refrigeración líquida personalizada con pantalla LCD Orion Gamers y GPU GeForce RTX PRIME vertical.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Chasis Hyte Y70 con pantalla táctil integrada 2.5K</li>
+                <li><span>✓</span> Refrigeración Líquida con monitor LCD de telemetría</li>
+                <li><span>✓</span> Tarjeta gráfica GeForce RTX de triple ventilador vertical</li>
+                <li><span>✓</span> Cable management artesanal milimétrico y flujo optimizado</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Fabricación bajo pedido a medida</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="A">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (2)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20cotizar%20un%20ensamble%20custom%20similar%20al%20Hyte%20Y70%20Touch." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar Ensamble Hyte
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. PRODUCTO B: PORTÁTIL ASUS ZENBOOK / VIVOBOOK CORPORATIVO -->
+          <article class="catalog-card" data-category="laptop-pro" data-product-id="B">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos del Portátil ASUS">
+              <span class="catalog-variants-pill">1 foto</span>
+              <img src="Imagenes%20y%20videos%20Pagina/B.jpeg" alt="Portátil ASUS verificado con placa oficial Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver detalles del equipo</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Portátiles Corporativos &amp; Trabajo · Letra B</div>
+              <h3 class="catalog-item-title">Portátil ASUS Ultra Slim Corporativo</h3>
+              <p class="catalog-item-desc">Equipo portátil ultraplano testeado, calibrado y listo para trabajo intensivo. Teclado ergonómico retroiluminado, chasis ultraligero y rendimiento térmico silencioso y eficiente.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Chasis ultradelgado con acabado metalizado premium</li>
+                <li><span>✓</span> Teclado retroiluminado de bajo perfil con respuesta suave</li>
+                <li><span>✓</span> Certificación y verificación exhaustiva en taller</li>
+                <li><span>✓</span> Sistema operativo limpio y software esencial preinstalado</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Disponible para entrega inmediata</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="B">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver detalles completos
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20consultar%20precio%20y%20disponibilidad%20del%20port%C3%A1til%20ASUS%20corporativo." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Consultar por WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. PRODUCTO C: LAPTOP GAMER LENOVO LEGION PRO (8 VARIANTES) -->
+          <article class="catalog-card" data-category="laptop-gamer" data-product-id="C">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos de la Laptop Gamer Lenovo Legion Pro">
+              <span class="catalog-variants-pill">8 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/C.jpeg" alt="Laptop Gamer Lenovo Legion Pro con Disipación Térmica Reforzada Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 8 variantes y caja original</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Laptops Gamer de Alto Calibre · Letra C</div>
+              <h3 class="catalog-item-title">Laptop Gamer Lenovo Legion Pro (Core i7 + RTX)</h3>
+              <p class="catalog-item-desc">Potencia gráfica brutal para títulos AAA y render 3D: procesador Intel Core i7, tarjeta gráfica dedicada NVIDIA GeForce RTX, teclado retroiluminado RGB Legion TrueStrike y empaque completo.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Procesador Intel Core i7 de alto desempeño</li>
+                <li><span>✓</span> Tarjeta gráfica dedicada NVIDIA GeForce RTX con Ray Tracing</li>
+                <li><span>✓</span> Teclado gamer Legion TrueStrike con iluminación RGB</li>
+                <li><span>✓</span> Incluye caja original Legion, cargador oficial y manuales</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Excelente estado con caja original</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="C">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (8)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20cotizar%20la%20laptop%20gamer%20Lenovo%20Legion%20Pro%20con%20Core%20i7%20y%20RTX." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar Legion Pro
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. PRODUCTO D: LAPTOP ASUS EXPERTBOOK CORE I5 13VA GEN (4 VARIANTES) -->
+          <article class="catalog-card" data-category="laptop-pro" data-product-id="D">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos de la Laptop ASUS ExpertBook">
+              <span class="catalog-variants-pill">4 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/D.jpeg" alt="Laptop ASUS ExpertBook Intel Core i5 13va Gen con BIOS EZ Mode verificado Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 4 fotos y telemetría BIOS</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Línea Corporativa &amp; Negocios · Letra D</div>
+              <h3 class="catalog-item-title">Laptop ASUS ExpertBook Core i5 13va Gen</h3>
+              <p class="catalog-item-desc">Rendimiento corporativo moderno: procesador Intel Core i5-13420H (13va Gen), 8 GB de RAM, SSD NVMe PCIe de 512 GB, pantalla Full HD 1920x1080, audio Dirac y lector de huellas biométrico.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Procesador Intel Core i5-13420H de 13va Generación</li>
+                <li><span>✓</span> Almacenamiento SSD NVMe M.2 512 GB PCIe de ultra velocidad</li>
+                <li><span>✓</span> Pantalla 15.6" Full HD (1920x1080) antirreflejo</li>
+                <li><span>✓</span> Sistema de audio Dirac y lector de huella dactilar integrado</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Disponible · Verificada en taller</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="D">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (4)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20cotizar%20la%20laptop%20ASUS%20ExpertBook%20Core%20i5%2013va%20Gen." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar ExpertBook
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. PRODUCTO E: LAPTOP EMPRESARIAL LENOVO THINKPAD T14 (4 VARIANTES) -->
+          <article class="catalog-card" data-category="laptop-pro" data-product-id="E">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos de la Laptop Lenovo ThinkPad T14">
+              <span class="catalog-variants-pill">4 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/E.jpeg" alt="Laptops Empresariales ThinkPad T14 con Teclado Ergonómico y Puertos Thunderbolt" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 4 fotos del ThinkPad T14</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Estación de Trabajo &amp; Durabilidad · Letra E</div>
+              <h3 class="catalog-item-title">Laptop Empresarial Lenovo ThinkPad T14 vPro</h3>
+              <p class="catalog-item-desc">El referente absoluto de durabilidad: procesador Intel Core i7 con certificación empresarial vPro, gráficos Intel Iris Xe, emblemático teclado ThinkPad con TrackPoint y puertos Thunderbolt / USB-C.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Procesador Intel Core i7 con certificación vPro empresarial</li>
+                <li><span>✓</span> Gráficos integrados Intel Iris Xe de alto rendimiento</li>
+                <li><span>✓</span> Chasis reforzado bajo especificaciones militares MIL-STD</li>
+                <li><span>✓</span> Teclado legendario ThinkPad resistente a derrames con TrackPoint</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Disponible para entrega o despacho</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="E">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (4)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20requiero%20cotizaci%C3%B3n%20de%20la%20laptop%20empresarial%20Lenovo%20ThinkPad%20T14." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar ThinkPad
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. PRODUCTO F: LENOVO V15 G4 AMN RYZEN 5 + 16GB (4 VARIANTES) -->
+          <article class="catalog-card" data-category="laptop-pro" data-product-id="F">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos de la Laptop Lenovo V15 G4">
+              <span class="catalog-variants-pill">4 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/F.jpeg" alt="Laptop Lenovo V15 G4 AMN AMD Ryzen 5 16GB RAM 512SSD Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 4 fotos y ficha técnica</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Rendimiento Ágil &amp; Trabajo · Letra F</div>
+              <h3 class="catalog-item-title">Laptop Lenovo V15 G4 (Ryzen 5 + 16GB RAM)</h3>
+              <p class="catalog-item-desc">Relación precio-calidad insuperable: procesador AMD Ryzen 5 7520U, 16 GB de RAM DDR4 3200, disco SSD de 512 GB, pantalla 15.6" Full HD y puerto LAN RJ45 para conexión por cable estable.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Procesador AMD Ryzen 5 7520U Serie 7000</li>
+                <li><span>✓</span> Memoria RAM 16 GB DDR4 3200 MHz de alta velocidad</li>
+                <li><span>✓</span> Almacenamiento SSD 512 GB NVMe ultrarrápido</li>
+                <li><span>✓</span> Pantalla 15.6" Full HD antirreflejo y puerto LAN Ethernet</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Precio especial de taller: $1.820.000 COP</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="F">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (4)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20me%20interesa%20la%20laptop%20Lenovo%20V15%20G4%20Ryzen%205%20con%2016GB%20RAM%20por%20%241.820.000." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Aprovechar Oferta ($1.820.000)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. PRODUCTO G: LENOVO IDEAPAD GAMING RYZEN 5 + GTX (3 VARIANTES) -->
+          <article class="catalog-card" data-category="laptop-gamer" data-product-id="G">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos de la Lenovo IdeaPad Gaming">
+              <span class="catalog-variants-pill">3 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/G.jpeg" alt="Laptop Gamer Lenovo IdeaPad Gaming con Ryzen 5 y GeForce GTX Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 3 fotos y teclado retroiluminado</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Gaming Competitivo &amp; Render · Letra G</div>
+              <h3 class="catalog-item-title">Laptop Gamer Lenovo IdeaPad Gaming</h3>
+              <p class="catalog-item-desc">Rendimiento balanceado para juegos competitivos y tareas creativas: procesador AMD Ryzen 5 Serie 5000, tarjeta gráfica dedicada NVIDIA GeForce GTX, teclado iluminado Ice Blue y pantalla IPS.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Procesador AMD Ryzen 5 Serie 5000 de alto rendimiento</li>
+                <li><span>✓</span> Tarjeta gráfica dedicada NVIDIA GeForce GTX + Radeon Graphics</li>
+                <li><span>✓</span> Teclado gamer retroiluminado Ice Blue con teclado numérico</li>
+                <li><span>✓</span> Pantalla IPS Full HD con amplio ángulo de visión y colores vivos</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Disponible · Mantenimiento térmico al día</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="G">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (3)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20cotizar%20la%20laptop%20gamer%20Lenovo%20IdeaPad%20Gaming%20Ryzen%205%20y%20GeForce%20GTX." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar IdeaPad Gaming
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. PRODUCTO H: LENOVO LOQ CORE I7 + RTX (3 VARIANTES) -->
+          <article class="catalog-card" data-category="laptop-gamer" data-product-id="H">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos de la Lenovo LOQ">
+              <span class="catalog-variants-pill">3 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/H.jpeg" alt="Laptop Gamer Lenovo LOQ Intel Core i7 RTX Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 3 fotos de la Lenovo LOQ</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Gaming de Última Generación · Letra H</div>
+              <h3 class="catalog-item-title">Laptop Gamer Lenovo LOQ (Core i7 + RTX)</h3>
+              <p class="catalog-item-desc">La nueva arquitectura gamer de Lenovo: procesador Intel Core i7 de última generación, gráficos NVIDIA GeForce RTX con arquitectura Ada Lovelace, chasis deportivo Storm Grey y disipación de alta presión.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Procesador Intel Core i7 de última generación</li>
+                <li><span>✓</span> Tarjeta gráfica dedicada NVIDIA GeForce RTX con DLSS y Ray Tracing</li>
+                <li><span>✓</span> Chasis aerodinámico Lenovo LOQ color Storm Grey</li>
+                <li><span>✓</span> Teclado gamer ergonómico y cámara web con obturador de privacidad</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Disponible en taller Orion Gamers</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="H">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (3)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20quiero%20cotizar%20la%20laptop%20gamer%20Lenovo%20LOQ%20Intel%20Core%20i7%20y%20RTX." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar Lenovo LOQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. PRODUCTO I: BUILD WHITE EDITION AORUS & MSI (2 VARIANTES) -->
+          <article class="catalog-card" data-category="gamer-custom" data-product-id="I">
+            <div class="catalog-card-media" role="button" tabindex="0" aria-label="Ampliar fotos del Ensamble White Edition">
+              <span class="catalog-variants-pill">2 fotos</span>
+              <img src="Imagenes%20y%20videos%20Pagina/I.jpeg" alt="PC Gamer White Edition Aorus MSI Orion Gamers con Refrigeración Líquida Blanca" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver 2 fotos del ensamble blanco</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Ensamble Blanco Custom · Letra I</div>
+              <h3 class="catalog-item-title">Build Ensamble White Edition Aorus &amp; MSI</h3>
+              <p class="catalog-item-desc">Estética inmaculada en chasis blanco Thermaltake: motherboard Aorus de última generación, refrigeración líquida blanca con tubos mallados, tarjeta gráfica MSI GeForce RTX y memorias Corsair RGB.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Chasis Thermaltake y disipador en acabado blanco puro</li>
+                <li><span>✓</span> Tarjeta gráfica GeForce RTX MSI con disipador reforzado</li>
+                <li><span>✓</span> Refrigeración líquida blanca con ventiladores ARGB</li>
+                <li><span>✓</span> Módulos de memoria RAM con sincronización RGB y SSD NVMe</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Configurable según tu presupuesto</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="I">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver fotos y variantes (2)
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20cotizar%20un%20ensamble%20Gamer%20White%20Edition." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Cotizar White Edition
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. LICENCIA: MICROSOFT OFFICE 2024 PROFESSIONAL PLUS -->
+          <article class="catalog-card" data-category="software-licencias" data-product-id="LIC-OFFICE24">
+            <div class="catalog-card-media banner-format" role="button" tabindex="0" aria-label="Ampliar información de Microsoft Office 2024">
+              <span class="catalog-variants-pill">1 foto</span>
+              <img src="Imagenes%20y%20videos%20Pagina/licencia.jpeg" alt="Licencia original Microsoft Office 2024 Professional Plus Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver detalles y aplicaciones</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Licencias de Software · Permanente</div>
+              <h3 class="catalog-item-title">Microsoft Office 2024 Professional Plus</h3>
+              <p class="catalog-item-desc">Licencia original y permanente de Microsoft Office 2024. Lista para activar y usar al instante en tu equipo, sin suscripciones mensuales ni interrupciones.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Suite completa: Word, Excel, PowerPoint, Outlook, OneNote, Access</li>
+                <li><span>✓</span> Licencia permanente de por vida (pago único)</li>
+                <li><span>✓</span> Compatible con Windows 10 y Windows 11 (32 / 64 bits)</li>
+                <li><span>✓</span> Entrega digital inmediata con soporte y guía de activación</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Entrega digital inmediata</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="LIC-OFFICE24">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver detalles de licencia
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20me%20interesa%20adquirir%20la%20licencia%20original%20de%20Microsoft%20Office%202024%20Professional%20Plus." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Comprar Office 2024
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11. LICENCIA: MICROSOFT 365 PERSONAL Y BUSINESS -->
+          <article class="catalog-card" data-category="software-licencias" data-product-id="LIC-O365">
+            <div class="catalog-card-media banner-format" role="button" tabindex="0" aria-label="Ampliar información de Microsoft 365">
+              <span class="catalog-variants-pill">1 foto</span>
+              <img src="Imagenes%20y%20videos%20Pagina/licencia2.jpeg" alt="Licencia Microsoft 365 Personal y Business Standard Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver detalles y nube</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Licencias de Software · Nube OneDrive</div>
+              <h3 class="catalog-item-title">Microsoft 365 Personal &amp; Business Standard</h3>
+              <p class="catalog-item-desc">Licencias originales de Microsoft 365 anuales. Aplicaciones premium actualizadas a la última versión, 1 TB en la nube OneDrive y sincronización multidispositivo.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Suscripción oficial por 12 meses (Personal o Business)</li>
+                <li><span>✓</span> 1 TB de almacenamiento seguro en la nube OneDrive</li>
+                <li><span>✓</span> Compatible con PC, Mac, tablets y smartphones iOS/Android</li>
+                <li><span>✓</span> Seguridad avanzada contra ransomware y respaldo automático</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Entrega digital inmediata</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="LIC-O365">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver detalles de licencia
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20me%20interesa%20adquirir%20la%20licencia%20de%20Microsoft%20365%20(Personal%20%2F%20Business)." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Comprar Microsoft 365
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12. LICENCIA: MICROSOFT PROJECT PROFESSIONAL -->
+          <article class="catalog-card" data-category="software-licencias" data-product-id="LIC-PROJECT">
+            <div class="catalog-card-media banner-format" role="button" tabindex="0" aria-label="Ampliar información de Microsoft Project">
+              <span class="catalog-variants-pill">1 foto</span>
+              <img src="Imagenes%20y%20videos%20Pagina/licencia3.jpeg" alt="Licencia Microsoft Project Professional Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver detalles de software</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Licencias de Software · Profesional</div>
+              <h3 class="catalog-item-title">Microsoft Project Professional</h3>
+              <p class="catalog-item-desc">Licencia original de Microsoft Project Professional. Gestiona recursos, tiempos, diagramas de Gantt y presupuestos con precisión para proyectos de ingeniería y corporativos.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Gestión profesional de cronogramas, rutas críticas y costos</li>
+                <li><span>✓</span> Plantillas integradas y diagramas de Gantt interactivos</li>
+                <li><span>✓</span> Activación original y permanente de por vida (pago único)</li>
+                <li><span>✓</span> Compatibilidad completa con Windows 10 y Windows 11</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Entrega digital inmediata</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="LIC-PROJECT">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver detalles de licencia
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20cotizar%20la%20licencia%20de%20Microsoft%20Project%20Professional." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Comprar MS Project
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 13. LICENCIA: ANTIVIRUS KASPERSKY -->
+          <article class="catalog-card" data-category="software-licencias" data-product-id="LIC-KASPERSKY">
+            <div class="catalog-card-media banner-format" role="button" tabindex="0" aria-label="Ampliar información de Antivirus Kaspersky">
+              <span class="catalog-variants-pill">1 foto</span>
+              <img src="Imagenes%20y%20videos%20Pagina/licencia4.jpeg" alt="Licencia original Antivirus Kaspersky Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver protección y escudo</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Licencias de Software · Ciberseguridad</div>
+              <h3 class="catalog-item-title">Antivirus Kaspersky (Protección Esencial &amp; Total)</h3>
+              <p class="catalog-item-desc">Licencia original de Antivirus Kaspersky. Protección en tiempo real contra virus, spyware, ransomware y amenazas web sin ralentizar el rendimiento de tu PC.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Escudo en tiempo real contra virus, malware y troyanos</li>
+                <li><span>✓</span> Protección bancaria y navegación segura anti-phishing</li>
+                <li><span>✓</span> Modo juego optimizado: sin lag ni interrupciones</li>
+                <li><span>✓</span> Clave original verificada con asesoría de taller</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Entrega digital inmediata</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="LIC-KASPERSKY">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver detalles de licencia
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20adquirir%20la%20licencia%20de%20Antivirus%20Kaspersky%20para%20proteger%20mi%20equipo." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Comprar Kaspersky
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 14. LICENCIA: WINDOWS 11 PRO / WINDOWS 10 PRO OEM -->
+          <article class="catalog-card" data-category="software-licencias" data-product-id="LIC-WINDOWS">
+            <div class="catalog-card-media banner-format" role="button" tabindex="0" aria-label="Ampliar información de Windows 11/10 Pro">
+              <span class="catalog-variants-pill">1 foto</span>
+              <img src="Imagenes%20y%20videos%20Pagina/licencia5.jpeg" alt="Licencia original Windows 11 Pro y Windows 10 Pro Orion Gamers" loading="lazy">
+              <div class="catalog-media-overlay">
+                <span class="overlay-badge">Ver activación permanente</span>
+              </div>
+            </div>
+            <div class="catalog-card-body">
+              <div class="catalog-category-tag">Licencias de Software · Sistema Operativo</div>
+              <h3 class="catalog-item-title">Windows 11 Pro / Windows 10 Pro &amp; Home OEM</h3>
+              <p class="catalog-item-desc">Licencias originales de Windows 11 Pro y Windows 10 Pro. Dile adiós al aviso de activación, recibe todas las actualizaciones oficiales y aprovecha al 100% tu computador.</p>
+              <ul class="catalog-item-specs">
+                <li><span>✓</span> Activación permanente original vinculada a la placa madre (OEM)</li>
+                <li><span>✓</span> Desbloqueo total de BitLocker, Escritorio Remoto y Hyper-V</li>
+                <li><span>✓</span> Descargas directas y parches de seguridad oficiales de Microsoft</li>
+                <li><span>✓</span> Clave digital de 25 caracteres con garantía de activación</li>
+              </ul>
+              <div class="catalog-card-footer">
+                <span class="catalog-stock-status">Entrega digital inmediata</span>
+                <div class="catalog-card-actions">
+                  <button type="button" class="btn btn-secondary btn-catalog-view" data-product-id="LIC-WINDOWS">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    Ver detalles de licencia
+                  </button>
+                  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20deseo%20comprar%20la%20licencia%20original%20de%20Windows%2011%20Pro%20%2F%20Windows%2010%20Pro." target="_blank" rel="noopener" class="btn btn-whatsapp btn-catalog-quote">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                    Comprar Windows Pro
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== BANNER DE COTIZACIÓN A MEDIDA ==================== -->
+    <section class="catalog-custom-cta">
+      <div class="container">
+        <div class="custom-cta-card">
+          <div class="custom-cta-glow"></div>
+          <div class="custom-cta-content">
+            <div class="custom-cta-text">
+              <span class="pill-gold">ASESORÍA PERSONALIZADA DIRECTA</span>
+              <h2>¿Buscas una configuración especial o compras por volumen?</h2>
+              <p>Te armamos una cotización detallada según tu presupuesto exacto: componentes específicos, torres para render 3D o paquetes de software y licencias corporativas para tu negocio.</p>
+            </div>
+            <div class="custom-cta-action">
+              <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20necesito%20una%20cotizaci%C3%B3n%20personalizada%20con%20mi%20presupuesto." target="_blank" rel="noopener" class="btn btn-whatsapp btn-booking-lg">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                Solicitar Cotización a Medida
+              </a>
+              <span class="booking-note">Respuesta personalizada por WhatsApp · Itagüí, Antioquia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODAL DE DETALLE Y VARIANTES DE PRODUCTO ==================== -->
+    <div class="product-modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="product-modal-backdrop" id="product-modal-backdrop"></div>
+      <div class="product-modal-dialog">
+        <button type="button" class="product-modal-close" id="product-modal-close" aria-label="Cerrar modal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+
+        <div class="product-modal-grid">
+          <!-- COLUMNA IZQUIERDA: DESCRIPCIÓN Y ESPECIFICACIONES -->
+          <div class="product-modal-details">
+            <div class="product-modal-header">
+              <div class="catalog-category-tag" id="modal-product-tag">Línea Oficial</div>
+              <h2 class="product-modal-title" id="modal-product-title">Nombre del Producto</h2>
+            </div>
+
+            <div class="product-modal-body">
+              <p class="product-modal-desc" id="modal-product-desc">Descripción detallada del equipo.</p>
+              
+              <div class="product-modal-specs-wrap">
+                <span class="product-modal-specs-title">Especificaciones clave:</span>
+                <ul class="catalog-item-specs" id="modal-product-specs">
+                  <!-- Se llena dinámicamente -->
+                </ul>
+              </div>
+            </div>
+
+            <div class="product-modal-footer">
+              <div class="catalog-stock-status" id="modal-product-status">Disponible · Verificada en taller</div>
+              <a href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-booking-lg" id="modal-product-wa">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+                <span id="modal-product-wa-text">Cotizar por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: SLIDER DE IMÁGENES Y VARIANTES -->
+          <div class="product-modal-slider-col">
+            <div class="product-modal-slider" id="product-modal-slider">
+              <span class="product-modal-counter" id="modal-slider-counter">1 / 1</span>
+              
+              <button type="button" class="modal-slider-arrow modal-slider-prev" id="modal-slider-prev" aria-label="Foto anterior">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              
+              <div class="modal-slider-viewport">
+                <img id="modal-slider-img" src="" alt="Vista ampliada del producto" loading="lazy">
+              </div>
+
+              <button type="button" class="modal-slider-arrow modal-slider-next" id="modal-slider-next" aria-label="Foto siguiente">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+            <!-- MINIATURAS / THUMBNAILS -->
+            <div class="product-modal-thumbs" id="modal-thumbs-container" aria-label="Miniaturas de variantes">
+              <!-- Miniaturas renderizadas por JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Logos%20OrionGamers/Orion_Gamers_Variante_14.webp" alt="Orion Gamers" width="36" height="36" id="footer-logo">
+        <span>ORION <span class="accent">GAMERS</span></span>
+      </div>
+      <div class="footer-links">
+        <a href="mantenimientos.html">Mantenimientos</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="catalogo.html" class="accent">Catálogo</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-contact">
+        <a href="https://wa.me/573137829331" target="_blank" rel="noopener">WhatsApp: +57 313 782 9331</a>
+        <a href="mailto:oriongamers9@gmail.com">oriongamers9@gmail.com</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Orion Gamers · oriongamerstecnologia.com · Itagüí, Antioquia</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FAB -->
+  <a href="https://wa.me/573137829331?text=Hola%20Orion%20Gamers%2C%20tengo%20una%20consulta%20sobre%20el%20cat%C3%A1logo" target="_blank" rel="noopener" class="wa-fab" aria-label="WhatsApp">
+    <span class="wa-pulse"></span>
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zM17.5 14.38c-.28-.14-1.65-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.43 0 1.44 1.03 2.82 1.18 3.01.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.11.56-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
