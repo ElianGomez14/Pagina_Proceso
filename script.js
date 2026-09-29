@@ -4,6 +4,32 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── ANIMACIONES: reveal al hacer scroll + salida de página ── */
+  const revealSel = '.hero-text > *, .hero-visual, .catalog-hero .container > *, .section-header, .service-box, .service-card, .catalog-card, .maint-card, .trust-item, .video-showcase-card, .ps5-showcase-card, .ps5-variants-box, .custom-cta-card, .gallery-cta, .carousel, .cards-grid > *';
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll(revealSel).forEach(el => {
+      const i = [...el.parentElement.children].indexOf(el);
+      el.style.setProperty('--d', Math.min(i, 6) * 0.08 + 's');
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
+  // Fade-out antes de navegar (solo si el navegador no soporta View Transitions)
+  if (!CSS.supports('view-transition-name', 'none')) {
+    document.addEventListener('click', (e) => {
+      const a = e.target.closest('a[href]');
+      if (!a || a.target === '_blank' || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      const u = new URL(a.href, location.href);
+      if (u.origin !== location.origin || u.pathname === location.pathname || u.protocol !== 'http:' && u.protocol !== 'https:' && u.protocol !== 'file:') return;
+      e.preventDefault();
+      document.body.classList.add('page-leave');
+      setTimeout(() => { location.href = a.href; }, 250);
+    });
+  }
+
   /* ── TEMA ── */
   const toggle = document.getElementById('theme-toggle');
   const logo = document.getElementById('brand-logo');
@@ -76,28 +102,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const slides = [
     {
       src: 'Imagenes%20y%20videos%20Pagina/carrusel.jpeg',
-      title: 'Ensamble Custom con Pantalla LCD',
-      desc: 'Refrigeración líquida personalizada con logo Orion Gamers y montaje vertical de GPU GeForce RTX.'
+      title: 'Ensamble custom con pantalla LCD',
+      desc: 'Refrigeración líquida con logo Orion Gamers y GPU GeForce RTX vertical.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/carrusel2.jpeg',
-      title: 'Portátiles y Equipos Corporativos',
-      desc: 'Mantenimiento, optimización y venta de laptops seleccionadas con respaldo Orion Gamers.'
+      title: 'Portátiles y equipos corporativos',
+      desc: 'Mantenimiento, optimización y venta de laptops con respaldo Orion Gamers.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/carrusel3.jpeg',
-      title: 'Laptops Gamer de Alta Gama',
-      desc: 'Diagnóstico térmico, mantenimiento de disipadores y repotenciación para equipos gaming.'
+      title: 'Laptops gamer de alta gama',
+      desc: 'Diagnóstico térmico, mantenimiento y repotenciación para equipos gaming.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/carrusel4.jpeg',
-      title: 'Ensamble White Edition & Upgrades',
-      desc: 'Chasis blanco, componentes MSI y AORUS, memorias RGB y almacenamiento NVMe ultrarrápido.'
+      title: 'Ensamble White Edition y upgrades',
+      desc: 'Chasis blanco, componentes MSI y AORUS, RAM RGB y SSD NVMe.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/carrusel5.jpeg',
-      title: 'Optimización & Mantenimiento Gamer',
-      desc: 'Pastas térmicas de alta conductividad, limpieza profunda y calibración de flujo de aire.'
+      title: 'Optimización y mantenimiento gamer',
+      desc: 'Pastas de alta conductividad, limpieza profunda y flujo de aire calibrado.'
     }
   ];
 
@@ -239,48 +265,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const showcaseVideos = [
     {
       src: 'Imagenes%20y%20videos%20Pagina/Antesde.mp4',
-      tag: 'ANTES DEL SERVICIO',
+      tag: 'ANTES',
       dotColor: '#ef4444',
-      title: 'Diagnóstico & Obstrucción Térmica Inicial',
-      desc: 'Estado inicial: disipadores saturados de polvo, ventiladores frenados y pasta térmica reseca.'
+      title: 'Diagnóstico inicial',
+      desc: 'Disipadores llenos de polvo, ventiladores frenados y pasta reseca.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/DespuesDe.mp4',
-      tag: 'DESPUÉS · RESULTADO ORION GAMERS',
+      tag: 'DESPUÉS',
       dotColor: '#22c55e',
-      title: 'Mantenimiento Completado & 100% Optimizado',
-      desc: 'Resultado final: desarme minucioso, pasta de alta conductividad, thermal pads nuevos y flujo térmico restaurado.'
+      title: 'Mantenimiento completado',
+      desc: 'Desarme completo, pasta de alta conductividad, thermal pads nuevos y buen flujo térmico.'
     }
   ];
 
   const ps5Videos = [
     {
       src: 'Imagenes%20y%20videos%20Pagina/ps5.mp4',
-      tag: 'FASE 1 DE 4 · DESENSAMBLE',
+      tag: 'FASE 1 DE 4 · DESARME',
       dotColor: '#0070d1',
-      title: 'Fase 1: Desensamble & Diagnóstico Inicial',
-      desc: 'Apertura técnica y minuciosa de las cubiertas de la PS5, desconexión de sensores y primera inspección de acumulación de polvo en ductos y toberas.'
+      title: 'Fase 1: Desarme y diagnóstico',
+      desc: 'Apertura de la PS5, desconexión de sensores e inspección del polvo en ductos y toberas.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/ps5-2.mp4',
       tag: 'FASE 2 DE 4 · TURBINA 120MM',
       dotColor: '#0070d1',
-      title: 'Fase 2: Extracción & Limpieza de Turbina',
-      desc: 'Desmonte de turbina de 120mm, lavado profundo de aspas, remoción de fibras atascadas y balanceo acústico silencioso.'
+      title: 'Fase 2: Limpieza de turbina',
+      desc: 'Turbina de 120mm desmontada, aspas lavadas, fibras retiradas y balanceo silencioso.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/ps5-3.mp4',
-      tag: 'FASE 3 DE 4 · DISIPADOR MASIVO',
+      tag: 'FASE 3 DE 4 · DISIPADOR',
       dotColor: '#0070d1',
-      title: 'Fase 3: Disipador Masivo de Cobre & Toberas',
-      desc: 'Desobstrucción total del bloque de aletas de cobre y aluminio, toberas de escape de calor y túnel hacia la fuente de poder.'
+      title: 'Fase 3: Disipador y toberas',
+      desc: 'Aletas de cobre y aluminio, toberas de escape y túnel de la fuente completamente limpios.'
     },
     {
       src: 'Imagenes%20y%20videos%20Pagina/ps5-4.mp4',
       tag: 'FASE 4 DE 4 · METAL LÍQUIDO APU',
       dotColor: '#0070d1',
-      title: 'Fase 4: Metal Líquido & Ensamble Final',
-      desc: 'Tratamiento del compuesto de metal líquido sobre el procesador AMD Oberon, eliminación de zonas secas, sellado hermético y armado final.'
+      title: 'Fase 4: Metal líquido y cierre',
+      desc: 'Metal líquido sobre el procesador AMD Oberon, sin zonas secas, con sellado y armado final.'
     }
   ];
 
@@ -339,14 +365,14 @@ document.addEventListener('DOMContentLoaded', () => {
       btnAntes.type = 'button';
       btnAntes.className = `btn-modal-switch${currentIdx === 0 ? ' active' : ''}`;
       btnAntes.id = 'btn-switch-antes';
-      btnAntes.textContent = 'Ver Antes';
+      btnAntes.textContent = 'Ver antes';
       btnAntes.addEventListener('click', () => loadAndPlayModalVideo('pc', 0));
 
       const btnDespues = document.createElement('button');
       btnDespues.type = 'button';
       btnDespues.className = `btn-modal-switch${currentIdx === 1 ? ' active' : ''}`;
       btnDespues.id = 'btn-switch-despues';
-      btnDespues.textContent = 'Ver Después';
+      btnDespues.textContent = 'Ver después';
       btnDespues.addEventListener('click', () => loadAndPlayModalVideo('pc', 1));
 
       modalNav.appendChild(btnAntes);
@@ -494,18 +520,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const catalogProducts = {
     A: {
       title: 'Ensamble Custom Hyte Y70 Touch Screen',
-      badge: 'Insignia Taller',
+      badge: 'Del taller',
       badgeClass: 'pill-cyan',
-      tag: 'Ensamble Custom de Exhibición · Letra A',
-      desc: 'Construcción maestra realizada en el taller de Orion Gamers: chasis Hyte Y70 con pantalla LCD táctil de 14.5" 2.5K integrada, refrigeración líquida personalizada con pantalla LCD Orion Gamers para telemetría en tiempo real y GPU GeForce RTX PRIME en montaje vertical.',
+      tag: 'Ensamble Custom',
+      desc: 'Armado en nuestro taller: chasis Hyte Y70 con pantalla táctil de 14.5" 2.5K, refrigeración líquida con LCD de temperaturas y GPU GeForce RTX vertical.',
       specs: [
-        'Chasis Hyte Y70 con pantalla táctil integrada de alta resolución 2.5K',
-        'Refrigeración líquida con monitor LCD de temperaturas en tiempo real',
-        'Tarjeta gráfica GeForce RTX de triple ventilador en montaje vertical',
-        'Cable management artesanal milimétrico, iluminación ARGB y flujo de aire optimizado'
+        'Chasis Hyte Y70 con pantalla táctil 2.5K',
+        'Refrigeración líquida con LCD de temperaturas',
+        'GPU GeForce RTX vertical de triple ventilador',
+        'Cableado ordenado, iluminación ARGB y buen flujo de aire'
       ],
-      status: 'Fabricación bajo pedido a medida',
-      waText: 'Hola Orion Gamers, deseo cotizar un ensamble custom similar al Hyte Y70 Touch (Letra A).',
+      status: 'Bajo pedido',
+      waText: 'Hola Orion Gamers, deseo cotizar un ensamble custom similar al Hyte Y70 Touch.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/A.jpeg',
         'Imagenes%20y%20videos%20Pagina/A2.jpeg'
@@ -513,36 +539,36 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     B: {
       title: 'Portátil ASUS Ultra Slim Corporativo',
-      badge: 'Respaldo Orion',
+      badge: 'Con respaldo',
       badgeClass: 'pill-gold',
-      tag: 'Línea Corporativa & Productividad · Letra B',
-      desc: 'Portátil corporativo verificado por Orion Gamers: chasis ultraligero y estilizado, pantalla antirreflejo de alta resolución, excelente autonomía de batería y teclado ergonómico diseñado para largas jornadas de trabajo profesional y multitarea.',
+      tag: 'Portátil Corporativo',
+      desc: 'Portátil corporativo verificado: chasis ultraligero, pantalla antirreflejo, buena batería y teclado ergonómico para jornadas largas.',
       specs: [
-        'Chasis ultradelgado metálico de alta resistencia y portabilidad',
-        'Pantalla Full HD antirreflejo con protección visual para largas jornadas',
-        'Teclado ergonómico de perfil bajo y respuesta táctil precisa',
-        'Conectividad moderna USB-C, HDMI de alta resolución y Wi-Fi de alta velocidad'
+        'Chasis ultradelgado y resistente',
+        'Pantalla Full HD antirreflejo',
+        'Teclado ergonómico de perfil bajo',
+        'USB-C, HDMI y Wi-Fi rápido'
       ],
-      status: 'Disponible · Garantía de taller',
-      waText: 'Hola Orion Gamers, deseo cotizar el portátil ASUS Ultra Slim Corporativo (Letra B).',
+      status: 'Disponible · Con garantía',
+      waText: 'Hola Orion Gamers, deseo cotizar el portátil ASUS Ultra Slim Corporativo.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/B.jpeg'
       ]
     },
     C: {
       title: 'Laptop Gamer Lenovo Legion Pro (Core i7 + RTX)',
-      badge: 'Rendimiento Extremo',
+      badge: 'Máximo rendimiento',
       badgeClass: 'pill-purple',
-      tag: 'Gamer Pro & Renderizado · Letra C',
-      desc: 'Máxima potencia para eSports y renderizado 3D: procesador Intel Core i7 de alto rendimiento, tarjeta gráfica dedicada NVIDIA GeForce RTX de alto TGP, pantalla gamer de 165Hz con panel IPS calibrado de fábrica y disipación Legion Coldfront con doble ventilador y cámara de cobre puro.',
+      tag: 'Laptop Gamer',
+      desc: 'Para eSports y render 3D: Intel Core i7, NVIDIA GeForce RTX de alto TGP, pantalla IPS de 165Hz y sistema térmico Legion Coldfront.',
       specs: [
-        'Procesador Intel Core i7 de alto rendimiento móvil multinúcleo',
-        'Gráfica dedicada NVIDIA GeForce RTX con Ray Tracing y DLSS',
-        'Pantalla Gaming 165Hz IPS de colores precisos y rápida respuesta',
-        'Sistema térmico Legion Coldfront con toberas de disipación de cobre macizo'
+        'Procesador Intel Core i7 multinúcleo',
+        'NVIDIA GeForce RTX con Ray Tracing y DLSS',
+        'Pantalla IPS de 165Hz de respuesta rápida',
+        'Sistema térmico Legion Coldfront con cobre'
       ],
-      status: 'Disponible · 100% Verificada en taller',
-      waText: 'Hola Orion Gamers, deseo cotizar la laptop Gamer Lenovo Legion Pro Core i7 + RTX (Letra C).',
+      status: 'Disponible · Verificada en taller',
+      waText: 'Hola Orion Gamers, deseo cotizar la laptop Gamer Lenovo Legion Pro Core i7 + RTX.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/C.jpeg',
         'Imagenes%20y%20videos%20Pagina/C2.jpeg',
@@ -556,18 +582,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     D: {
       title: 'Laptop ASUS ExpertBook Core i5 13va Gen',
-      badge: 'Línea Corporativa',
+      badge: 'Corporativo',
       badgeClass: 'pill-gold',
-      tag: 'Línea Corporativa & Negocios · Letra D',
-      desc: 'Rendimiento corporativo moderno: procesador Intel Core i5-13420H (13va Gen), 8 GB de RAM, SSD NVMe PCIe de 512 GB, pantalla Full HD 1920x1080, audio Dirac y lector de huellas biométrico. Verificada con telemetría de hardware en nuestro taller.',
+      tag: 'Portátil Corporativo',
+      desc: 'Intel Core i5-13420H (13va Gen), 8 GB de RAM, SSD NVMe de 512 GB, pantalla Full HD, audio Dirac y lector de huellas. Verificada en taller.',
       specs: [
-        'Procesador Intel Core i5-13420H de 13va Generación (alto rendimiento)',
-        'Almacenamiento SSD NVMe M.2 512 GB PCIe de ultra velocidad',
+        'Intel Core i5-13420H de 13va Gen',
+        'SSD NVMe M.2 de 512 GB',
         'Pantalla 15.6" Full HD (1920x1080) antirreflejo',
-        'Sistema de audio Dirac y lector de huella dactilar integrado para seguridad'
+        'Audio Dirac y lector de huellas'
       ],
       status: 'Disponible · Verificada en taller',
-      waText: 'Hola Orion Gamers, deseo cotizar la laptop ASUS ExpertBook Core i5 13va Gen (Letra D).',
+      waText: 'Hola Orion Gamers, deseo cotizar la laptop ASUS ExpertBook Core i5 13va Gen.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/D.jpeg',
         'Imagenes%20y%20videos%20Pagina/D2.jpeg',
@@ -577,18 +603,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     E: {
       title: 'Laptop Empresarial Lenovo ThinkPad T14 vPro',
-      badge: 'Línea Empresarial',
+      badge: 'Empresarial',
       badgeClass: 'pill-gold',
-      tag: 'Estación de Trabajo & Durabilidad · Letra E',
-      desc: 'El referente absoluto de durabilidad para ingeniería y negocios: procesador Intel Core i7 con certificación empresarial vPro, gráficos Intel Iris Xe, emblemático teclado ThinkPad con TrackPoint ergonómico y puertos Thunderbolt / USB-C de alta velocidad.',
+      tag: 'Portátil Empresarial',
+      desc: 'Durabilidad para ingeniería y negocios: Intel Core i7 vPro, gráficos Iris Xe, teclado ThinkPad con TrackPoint y puertos Thunderbolt / USB-C.',
       specs: [
-        'Procesador Intel Core i7 con certificación vPro empresarial',
-        'Gráficos integrados Intel Iris Xe de alto rendimiento multitarea',
-        'Chasis reforzado bajo especificaciones militares MIL-STD anti-impactos',
-        'Doble puerto Thunderbolt / USB-C y teclado ergonómico legendario ThinkPad'
+        'Intel Core i7 con vPro',
+        'Gráficos Intel Iris Xe',
+        'Chasis reforzado MIL-STD',
+        'Doble Thunderbolt / USB-C y teclado ThinkPad'
       ],
       status: 'Disponible · Garantía de 6 meses',
-      waText: 'Hola Orion Gamers, deseo cotizar la laptop Lenovo ThinkPad T14 vPro (Letra E).',
+      waText: 'Hola Orion Gamers, deseo cotizar la laptop Lenovo ThinkPad T14 vPro.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/E.jpeg',
         'Imagenes%20y%20videos%20Pagina/E2.jpeg',
@@ -598,18 +624,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     F: {
       title: 'Laptop Lenovo V15 G4 (Ryzen 5 + 16GB RAM)',
-      badge: 'Oferta Destacada',
+      badge: 'Oferta',
       badgeClass: 'pill-green',
-      tag: 'Precio Especial: $1.820.000 COP · Letra F',
-      desc: 'Excelente balance para oficina y universidad: procesador AMD Ryzen 5 7520U de 4 núcleos / 8 hilos, memoria de 16 GB LPDDR5 ultrarrápida, almacenamiento SSD NVMe de 512 GB y pantalla Full HD de 15.6 pulgadas antirreflejo.',
+      tag: 'Precio especial: $1.820.000 COP',
+      desc: 'Ideal para oficina y universidad: AMD Ryzen 5 7520U, 16 GB de RAM LPDDR5, SSD NVMe de 512 GB y pantalla Full HD de 15.6" antirreflejo.',
       specs: [
-        'Procesador AMD Ryzen 5 7520U (4 Núcleos / 8 Hilos hasta 4.3 GHz)',
-        'Memoria RAM 16 GB LPDDR5 de alta frecuencia para multitarea fluida',
-        'SSD NVMe M.2 512 GB PCIe de inicio instantáneo',
-        'Pantalla 15.6" Full HD (1920x1080) antirreflejo y chasis texturizado'
+        'AMD Ryzen 5 7520U (4 núcleos / 8 hilos, hasta 4.3 GHz)',
+        'RAM de 16 GB LPDDR5',
+        'SSD NVMe M.2 de 512 GB',
+        'Pantalla 15.6" Full HD antirreflejo'
       ],
-      status: 'En Promoción · $1.820.000 COP',
-      waText: 'Hola Orion Gamers, deseo comprar/cotizar la laptop Lenovo V15 G4 Ryzen 5 por $1.820.000 COP (Letra F).',
+      status: 'Promoción · $1.820.000 COP',
+      waText: 'Hola Orion Gamers, deseo comprar/cotizar la laptop Lenovo V15 G4 Ryzen 5 por $1.820.000 COP.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/F.jpeg',
         'Imagenes%20y%20videos%20Pagina/F2.jpeg',
@@ -619,18 +645,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     G: {
       title: 'Laptop Gamer Lenovo IdeaPad Gaming (Ryzen 5 + GTX)',
-      badge: 'Gamer Entrada',
+      badge: 'Gamer de entrada',
       badgeClass: 'pill-purple',
-      tag: 'Línea Gamer Entrada · Letra G',
-      desc: 'Tu puerta de entrada al gaming y renderizado: procesador AMD Ryzen 5 con gráficos dedicados NVIDIA GeForce GTX, teclado retroiluminado azul y ventilación de flujo optimizado probada en nuestro taller.',
+      tag: 'Gaming de Entrada',
+      desc: 'Tu entrada al gaming: AMD Ryzen 5 con NVIDIA GeForce GTX, teclado retroiluminado azul y ventilación probada en taller.',
       specs: [
-        'Procesador AMD Ryzen 5 de alto consumo energético y potencia de cálculo',
-        'Gráfica dedicada NVIDIA GeForce GTX para eSports y juegos populares',
-        'Teclado ergonómico retroiluminado en color azul gamer',
-        'Sistema de enfriamiento con doble ventilador y toberas traseras'
+        'Procesador AMD Ryzen 5',
+        'NVIDIA GeForce GTX para eSports y juegos populares',
+        'Teclado retroiluminado azul',
+        'Doble ventilador y toberas traseras'
       ],
-      status: 'Disponible · Mantenimiento térmico recién hecho',
-      waText: 'Hola Orion Gamers, deseo cotizar la laptop Gamer Lenovo IdeaPad Ryzen 5 + GTX (Letra G).',
+      status: 'Disponible · Mantenimiento reciente',
+      waText: 'Hola Orion Gamers, deseo cotizar la laptop Gamer Lenovo IdeaPad Ryzen 5 + GTX.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/G.jpeg',
         'Imagenes%20y%20videos%20Pagina/G2.jpeg',
@@ -639,18 +665,18 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     H: {
       title: 'Laptop Gamer Lenovo LOQ (Core i7 + RTX)',
-      badge: 'Nueva Generación',
+      badge: 'Nueva generación',
       badgeClass: 'pill-cyan',
-      tag: 'Línea Gamer Avanzada · Letra H',
-      desc: 'Construida para gamers competitivos y creadores de contenido: procesador Intel Core i7 de nueva generación, tarjeta NVIDIA GeForce RTX con DLSS 3 e inteligencia artificial, chasis con toberas traseras aerodinámicas y teclado gamer RGB.',
+      tag: 'Gaming Avanzado',
+      desc: 'Para gamers competitivos y creadores: Intel Core i7 de nueva generación, NVIDIA GeForce RTX con DLSS 3, toberas traseras y teclado RGB.',
       specs: [
-        'Procesador Intel Core i7 de nueva generación de alto rendimiento',
-        'Gráfica dedicada NVIDIA GeForce RTX compatible con DLSS 3 y Ray Tracing',
-        'Chasis Gamer LOQ con disipación trasera y toberas aerodinámicas',
-        'Pantalla de alta tasa de refresco para fluidez máxima en videojuegos'
+        'Intel Core i7 de nueva generación',
+        'NVIDIA GeForce RTX con DLSS 3 y Ray Tracing',
+        'Chasis LOQ con toberas traseras',
+        'Pantalla de alta tasa de refresco'
       ],
-      status: 'Disponible en tienda · Lista para entrega',
-      waText: 'Hola Orion Gamers, deseo cotizar la laptop Gamer Lenovo LOQ Core i7 + RTX (Letra H).',
+      status: 'Disponible · Entrega inmediata',
+      waText: 'Hola Orion Gamers, deseo cotizar la laptop Gamer Lenovo LOQ Core i7 + RTX.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/H.jpeg',
         'Imagenes%20y%20videos%20Pagina/H2.jpeg',
@@ -661,16 +687,16 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Build Ensamble White Edition Aorus & MSI',
       badge: 'White Edition',
       badgeClass: 'pill-cyan',
-      tag: 'Línea Custom Gamer & Estilo · Letra I',
-      desc: 'Ensamble blanco de exhibición armado en Orion Gamers: componentes seleccionados de marcas élite Aorus y MSI, refrigeración por aire o líquida en color blanco, memorias RAM DDR5 RGB sincronizadas, cableado sleeved blanco y flujo de aire gélido.',
+      tag: 'Ensamble White Edition',
+      desc: 'Ensamble blanco armado en Orion Gamers: componentes Aorus y MSI, refrigeración blanca, RAM DDR5 RGB y cableado sleeved.',
       specs: [
-        'Chasis blanco tipo pecera / panorámico de vidrio templado',
-        'Componentes premium MSI y AORUS con iluminación sincronizada',
-        'Memorias RAM DDR5 de alta frecuencia con disipador blanco',
-        'Cableado sleeved mallado en color blanco y ventiladores silenciosos'
+        'Chasis blanco panorámico de vidrio templado',
+        'Componentes MSI y AORUS con iluminación sincronizada',
+        'RAM DDR5 con disipador blanco',
+        'Cableado sleeved blanco y ventiladores silenciosos'
       ],
-      status: 'Disponible para ensamble inmediato',
-      waText: 'Hola Orion Gamers, deseo cotizar un ensamble Gamer White Edition (Letra I).',
+      status: 'Disponible para ensamble',
+      waText: 'Hola Orion Gamers, deseo cotizar un ensamble Gamer White Edition.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/I.jpeg',
         'Imagenes%20y%20videos%20Pagina/I2.jpeg'
@@ -680,15 +706,15 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Microsoft Office 2024 Professional Plus',
       badge: '',
       badgeClass: '',
-      tag: 'Licencias de Software · Permanente',
-      desc: 'Ofrecemos licencias originales de Microsoft Office 2024 Professional Plus, listas para activar y usar al instante en tu equipo. Disfruta de todas las herramientas esenciales de ofimática para trabajar y estudiar sin interrupciones ni suscripciones mensuales.',
+      tag: 'Licencia · Permanente',
+      desc: 'Licencia original de Office 2024 Professional Plus, lista para activar, sin suscripciones mensuales.',
       specs: [
-        'Suite completa incluida: Word, Excel, PowerPoint, Outlook, OneNote y Access',
-        'Licencia permanente de por vida (pago único, sin mensualidades)',
-        'Activación digital directa para 1 computador con Windows 10 o Windows 11',
-        'Entrega inmediata con clave oficial y soporte técnico garantizado de taller'
+        'Word, Excel, PowerPoint, Outlook, OneNote y Access',
+        'Licencia permanente (pago único)',
+        'Activación para 1 computador con Windows 10 u 11',
+        'Entrega inmediata con clave oficial y soporte'
       ],
-      status: 'Entrega digital inmediata · Clave genuina',
+      status: 'Entrega digital inmediata · Clave original',
       waText: 'Hola Orion Gamers, me interesa adquirir la licencia original de Microsoft Office 2024 Professional Plus.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/licencia.jpeg'
@@ -698,13 +724,13 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Microsoft 365 Personal & Business Standard',
       badge: '',
       badgeClass: '',
-      tag: 'Licencias de Software · Nube OneDrive',
-      desc: 'Licencias originales de Microsoft 365 con suscripción oficial de 12 meses. Accede a las versiones más recientes y siempre actualizadas de Word, Excel, PowerPoint y Outlook, complementadas con 1 TB de almacenamiento seguro en la nube de OneDrive.',
+      tag: 'Licencia · Nube OneDrive',
+      desc: 'Microsoft 365 original por 12 meses: Word, Excel, PowerPoint y Outlook siempre actualizados, más 1 TB en OneDrive.',
       specs: [
-        'Suscripción oficial por 12 meses (modalidad Personal o Business Standard)',
-        '1 TB (1.000 GB) de almacenamiento seguro en la nube OneDrive con copia de seguridad',
-        'Instalación multidispositivo simultánea en PC Windows, Mac, tablets y smartphones',
-        'Seguridad avanzada contra malware, ransomware y protección de archivos críticos'
+        'Suscripción oficial de 12 meses (Personal o Business Standard)',
+        '1 TB en la nube OneDrive con respaldo',
+        'Para PC, Mac, tablets y celulares',
+        'Protección contra malware y ransomware'
       ],
       status: 'Entrega digital inmediata · Activación oficial',
       waText: 'Hola Orion Gamers, me interesa adquirir la licencia de Microsoft 365 (Personal / Business).',
@@ -716,13 +742,13 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Microsoft Project Professional',
       badge: '',
       badgeClass: '',
-      tag: 'Licencias de Software · Profesional',
-      desc: 'Licencia original de Microsoft Project Professional, la herramienta estándar de la industria para directores de proyectos, ingenieros y corporativos. Gestiona recursos, tiempos, cronogramas y presupuestos con máxima precisión y control visual.',
+      tag: 'Licencia · Profesional',
+      desc: 'Project Professional original, el estándar para gestionar recursos, tiempos, cronogramas y presupuestos.',
       specs: [
-        'Control y gestión integral de cronogramas, rutas críticas, subtareas y costos',
-        'Visualización intuitiva con diagramas de Gantt, paneles Kanban y escalas de tiempo',
-        'Licencia original permanente de por vida (pago único sin tarifas recurrentes)',
-        'Compatible con Windows 10 y Windows 11 en entornos corporativos o independientes'
+        'Cronogramas, rutas críticas, subtareas y costos',
+        'Diagramas de Gantt, paneles Kanban y escalas de tiempo',
+        'Licencia permanente (pago único)',
+        'Para Windows 10 y 11'
       ],
       status: 'Entrega digital inmediata · Licencia oficial',
       waText: 'Hola Orion Gamers, deseo cotizar la licencia de Microsoft Project Professional.',
@@ -731,36 +757,36 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'LIC-KASPERSKY': {
-      title: 'Antivirus Kaspersky (Protección Esencial & Total)',
+      title: 'Antivirus Kaspersky (Esencial y Total)',
       badge: '',
       badgeClass: '',
-      tag: 'Licencias de Software · Ciberseguridad',
-      desc: 'Protección en tiempo real líder en la industria con Antivirus Kaspersky. Defiende tu equipo y tu información confidencial contra virus, spyware, ataques de ransomware, troyanos y sitios web fraudulentos con la asesoría técnica de Orion Gamers.',
+      tag: 'Licencia · Ciberseguridad',
+      desc: 'Protección en tiempo real contra virus, spyware, ransomware, troyanos y sitios fraudulentos, con asesoría de Orion Gamers.',
       specs: [
-        'Motor de escaneo proactivo en tiempo real contra amenazas de día cero y malware',
-        'Protección bancaria Safe Money para transacciones y compras seguras en línea',
-        'Modo gaming y rendimiento ligero: máxima protección sin afectar los FPS de tus juegos',
-        'Clave digital oficial con garantía de activación y soporte en taller'
+        'Escaneo en tiempo real contra amenazas de día cero',
+        'Safe Money para compras y pagos seguros',
+        'Modo gaming: protege sin bajar los FPS',
+        'Clave oficial con garantía y soporte'
       ],
-      status: 'Entrega digital inmediata · Escudo activo',
+      status: 'Entrega digital inmediata',
       waText: 'Hola Orion Gamers, deseo adquirir la licencia de Antivirus Kaspersky para proteger mi equipo.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/licencia4.jpeg'
       ]
     },
     'LIC-WINDOWS': {
-      title: 'Windows 11 Pro / Windows 10 Pro & Home OEM',
+      title: 'Windows 11 Pro / 10 Pro y Home OEM',
       badge: '',
       badgeClass: '',
-      tag: 'Licencias de Software · Sistema Operativo',
-      desc: 'Licencias originales OEM para Windows 11 Pro, Windows 10 Pro y Home. Despídete para siempre del molesto mensaje de activación en tu pantalla, desbloquea todas las funciones avanzadas del sistema operativo y recibe las actualizaciones de seguridad oficiales de Microsoft.',
+      tag: 'Licencia · Sistema operativo',
+      desc: 'Windows 11 Pro, 10 Pro y Home OEM originales: sin aviso de activación, con funciones avanzadas y actualizaciones oficiales.',
       specs: [
-        'Licencia OEM genuina vinculada permanentemente a la placa madre de tu PC',
-        'Desbloqueo completo de BitLocker, Escritorio Remoto (RDP), Hyper-V y Sandbox',
-        'Acceso ilimitado a actualizaciones y parches de seguridad directos de Microsoft',
-        'Entrega inmediata de clave alfanumérica de 25 caracteres con guía de uso'
+        'Licencia OEM original ligada a la placa madre',
+        'BitLocker, Escritorio Remoto, Hyper-V y Sandbox',
+        'Actualizaciones y parches oficiales de Microsoft',
+        'Clave de 25 caracteres con guía de uso'
       ],
-      status: 'Entrega digital inmediata · De por vida',
+      status: 'Entrega digital inmediata · Permanente',
       waText: 'Hola Orion Gamers, deseo comprar la licencia original de Windows 11 Pro / Windows 10 Pro.',
       variants: [
         'Imagenes%20y%20videos%20Pagina/licencia5.jpeg'
